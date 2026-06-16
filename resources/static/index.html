@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>PC Factory</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+  <style>
+    .how {
+      padding: 80px;
+      /* background: #eef2f7; */
+    }
+
+    .how h2 {
+      text-align: center;
+      font-size: 36px;
+      margin-bottom: 50px;
+    }
+
+    .how-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 60px;
+      margin-bottom: 60px;
+    }
+
+    .how-container.reverse {
+      flex-direction: row-reverse;
+    }
+
+    .how-img {
+      position: relative;
+      display: inline-block;
+      background: #f5f5f5;
+      padding: 30px;
+      border-radius: 20px;
+      transition: 0.3s;
+    }
+
+    .how-img:hover {
+      background: #ED7857;
+    }
+
+    .how-img img {
+      width: 100%;
+      max-width: 350px;
+      border-radius: 15px;
+      transition: 0.3s;
+      display: block;
+      margin: auto;
+    }
+
+
+    .how-text {
+      max-width: 500px;
+      text-align: left;
+    }
+
+    .how-container.reverse .how-text {
+      text-align: left;
+    }
+
+    .how-text h3 {
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+
+    .how-text p {
+      color: #555;
+      line-height: 1.6;
+    }
+  </style>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <h2>
+      <div class="logo" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">PC Factory</div>
+    </h2>
+
+    <h4 style="font-family: Verdana, Geneva, Tahoma, sans-serif;">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="build.html">Build PC</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </h4>
+  </nav>
+
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+
+    <div class="hero-left">
+
+      <!-- <h1 style="font-family: cursive;">Your Perfect PC Starts Here</h1>
+
+      <p style="font-family: monospace;">High Performance Gaming & Workstation Builds</p> -->
+
+      <h1 id="hero-title" style="font-family: Verdana, Geneva, Tahoma, sans-serif;"></h1>
+      <p id="hero-subtitle" style="font-family: Georgia, 'Times New Roman', Times, serif; color: black; "></p><br>
+
+      <!-- <div class="hero-buttons">
+        <a href="build.html" class="btn-primary"
+          style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Customize Your PC</a>
+      </div> -->
+
+    </div>
+
+
+    <div class="hero-right">
+      <!-- <img src="image/MXZ_Gaming_PC_Desktop_Computer__AMD_Ryzen_5_4500__RX_6600_8GB__16GB_DDR4__NVME_500GB_SSD__6RGB_Fans__Win_11_Pro_Ready__Gamer_Desktop_Computer_R5_4500__RX_6600_-removebg-preview.png"> -->
+      <img id="hero-img">
+    </div>
+
+  </section>
+
+
+  <!-- COMPONENT SECTION -->
+
+  <section class="builds">
+
+    <h2 style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Popular PC Builds</h2>
+
+    <div class="card-container">
+
+      <div class="card">
+        <h3 style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Starter Gaming PC</h3>
+        <p style="font-family: Georgia, 'Times New Roman', Times, serif;">Perfect for beginners.</p>
+        <p id="price1"> 60,000</p>
+      </div>
+
+      <div class="card">
+        <h3 style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Pro Gaming PC</h3>
+        <p style="font-family: Georgia, 'Times New Roman', Times, serif;">High FPS gaming experience.</p>
+        <p id="price2"> 1,20,000</p>
+      </div>
+
+      <div class="card">
+        <h3 style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Creator Workstation</h3>
+        <p style="font-family: Georgia, 'Times New Roman', Times, serif;">For editing & designing.</p>
+        <p id="price3"> 1,50,000</p>
+      </div>
+
+    </div>
+
+
+    <!-- FEATURES -->
+    <section class="section light">
+      <h2 style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Why Choose Us?</h2>
+
+      <div class="card-container">
+        <div class="card">
+          <h3 style="font-family: Verdana, Geneva, Tahoma, sans-serif;"><i class="fa-solid fa-microchip"></i> High
+            Performance</h3>
+          <p style="font-family: Georgia, 'Times New Roman', Times, serif;">Latest CPU & GPU builds</p>
+        </div>
+
+        <div class="card">
+          <h3 style="font-family: Verdana, Geneva, Tahoma, sans-serif;"><i class="fa-solid fa-indian-rupee-sign"></i>
+            Affordable</h3>
+          <p style="font-family: Georgia, 'Times New Roman', Times, serif;">Best price guarantee</p>
+        </div>
+
+        <div class="card">
+          <h3 style="font-family: Verdana, Geneva, Tahoma, sans-serif;"><i class="fa-solid fa-headset"></i> Support</h3>
+          <p style="font-family: Georgia, 'Times New Roman', Times, serif;">24/7 technical support</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="how">
+      <h2 style="font-family: Verdana, Geneva, Tahoma, sans-serif;">How It Works</h2>
+
+      <div class="how-container">
+
+        <!-- LEFT IMAGE -->
+        <div class="how-img">
+          <img
+            src="image/2Free 24 hour customer service to help customers solve product problems No physical product super bright h4 lights led motorbikes and cars.jpg"
+            alt="">
+          <div class="overlay"></div>
+        </div>
+
+        <!-- RIGHT TEXT -->
+        <div class="how-text">
+          <h3 style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Building Customer Personal 👤</h3>
+          <p style="font-family: Georgia, 'Times New Roman', Times, serif;">
+            We understand customer needs and build custom PC solutions based on usage.
+            Every build is tailored for performance and budget.
+          </p>
+        </div>
+
+      </div>
+
+      <div class="how-container reverse">
+
+
+        <!-- IMAGE -->
+        <div class="how-img">
+          <img src="image/expert team 2.jpg" alt="">
+          <div class="overlay"></div>
+        </div>
+
+        <!-- TEXT -->
+        <div class="how-text">
+          <h3 style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Deep Technical Consulting ⚙️</h3>
+          <p style="font-family: Georgia, 'Times New Roman', Times, serif;">
+            Our experts guide you before and after purchase to ensure the best experience.
+            We help you understand every component clearly.
+          </p>
+        </div>
+
+      </div>
+
+
+      <div class="how-container">
+
+        <!-- LEFT IMAGE -->
+        <div class="how-img">
+          <img src="image/download-removebg-preview.png" alt="">
+          <div class="overlay"></div>
+        </div>
+
+        <!-- RIGHT TEXT -->
+        <div class="how-text">
+          <h3 style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Pan India Free Delivery 🚚</h3>
+          <p style="font-family: Georgia, 'Times New Roman', Times, serif;">
+            We provide fast and safe delivery across India.
+            Your PC will be securely packed and delivered without damage.
+          </p>
+        </div>
+
+      </div>
+
+      <div class="how-container reverse">
+
+
+        <!-- IMAGE -->
+        <div class="how-img">
+          <img src="image/amazonfinds.jpg" alt="">
+          <div class="overlay"></div>
+        </div>
+
+        <!-- TEXT -->
+        <div class="how-text">
+          <h3 style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Ultra Durable Packing 📦</h3>
+          <p style="font-family: Georgia, 'Times New Roman', Times, serif;">
+            We use multi-layer protection to ensure your PC reaches safely.
+            Shockproof and damage-free delivery guaranteed.
+          </p>
+        </div>
+
+      </div>
+
+    </section>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <h2 style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Ready to Build Your PC?</h2><br>
+    <div class="hero-buttons">
+      <a href="build.html" class="btn-primary" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Customize Your
+        PC</a>
+    </div>
+  </section>
+
+  </section>
+
+  <section class="reviews">
+
+    <h2 style="font-family: Verdana, Geneva, Tahoma, sans-serif">Customer Reviews</h2>
+
+    <div id="reviewsContainer" class="card-container"></div>
+
+  </section>
+
+
+
+  <!-- FOOTER -->
+  <footer class="footer">
+
+    <div class="footer-container">
+
+      <!-- COMPANY -->
+      <div>
+        <h3 style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Company</h3>
+        <a href="about.html">
+          <p style="font-family: Georgia, 'Times New Roman', Times, serif;">About Us</p>
+        </a>
+        <p style="font-family: Georgia, 'Times New Roman', Times, serif;">Terms & Conditions</p>
+        <p style="font-family: Georgia, 'Times New Roman', Times, serif;">How to set up a PC</p>
+      </div>
+
+      <!-- CONTACT -->
+      <div>
+        <h3 style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Contact Us</h3>
+        <p style="font-family: Georgia, 'Times New Roman', Times, serif;"><i class="fa fa-phone"></i> +91 8765123466</p>
+        <p style="font-family: Georgia, 'Times New Roman', Times, serif;"><i class="fa fa-envelope"></i>
+          support@pcfactory.com</p>
+        <p style="font-family: Georgia, 'Times New Roman', Times, serif;"><i class="fa fa-link"></i> Get Support</p>
+      </div>
+
+      <!-- TIMING -->
+      <div>
+        <h3 style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Opening</h3>
+        <p style="font-family: Georgia, 'Times New Roman', Times, serif;">Mon - Sat : 9:00AM - 7:30PM</p>
+        <p style="font-family: Georgia, 'Times New Roman', Times, serif;">Sunday : 9:00AM - 6:00PM</p>
+      </div>
+
+    </div><br><br>
+
+    <p class="copy" style="margin-right: 50px; font-family: Georgia, 'Times New Roman', Times, serif;">© PC Factory, All
+      Rights Reserved</p>
+
+  </footer>
+
+
+  <script>
+
+    fetch("http://localhost:5050/api/reviews")
+      .then(res => res.json())
+      .then(data => {
+
+        let container = document.getElementById("reviewsContainer");
+        container.innerHTML = "";
+
+        data
+          .filter(r => r.status === "ACTIVE")   // only active reviews
+          .sort((a, b) => b.id - a.id)           // latest first
+          .forEach(r => {
+
+            let card = `
+<div class="card" style="font-family: Cambria;">
+<p>&#9733; &#9733; &#9733; &#9733; &#9733;</p>
+<p>${r.message}</p>
+<p>- ${r.name}</p>
+</div>
+`;
+
+            container.innerHTML += card;
+
+          });
+
+      })
+      .catch(err => console.log("Error:", err));
+
+  </script>
+
+
+  <script>
+
+    fetch("http://localhost:5050/api/content/home")
+      .then(res => res.json())
+      .then(data => {
+
+        let latest = {};
+
+        // store latest values
+        data.forEach(item => {
+          latest[item.section] = item.content;
+        });
+
+        // assign to UI
+        document.getElementById("hero-title").innerText = latest["hero-title"] || "";
+        document.getElementById("hero-subtitle").innerText = latest["hero-subtitle"] || "";
+        document.getElementById("hero-img").src =
+          "http://localhost:5050/image/" + latest["hero-image"];
+        document.getElementById("price1").innerText = "₹" + (latest["price1"] || "");
+        document.getElementById("price2").innerText = "₹" + (latest["price2"] || "");
+        document.getElementById("price3").innerText = "₹" + (latest["price3"] || "");
+
+      });
+
+  </script>
+
+</body>
+
+</html>

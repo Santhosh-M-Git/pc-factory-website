@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Contact - PC Factory</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <style>
+        .contacttitle::after {
+            background: black;
+        }
+    </style>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <h2>
+            <div class="logo" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">PC Factory</div>
+        </h2>
+
+        <h4 style="font-family: Verdana, Geneva, Tahoma, sans-serif;">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="build.html">Build PC</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </h4>
+    </nav>
+
+    <section class="contact-section">
+        <h2 class="contacttitle" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Contact Us</h2>
+
+        <div class="contact-container">
+
+            <!-- Contact Info -->
+            <div class="contact-info">
+                <h3 style="margin-left: 25px;" style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Get In Touch
+                </h3>
+
+
+                <hr>
+                <p style="font-family: Verdana, Geneva, Tahoma, sans-serif;"><strong>Email:</strong></p>
+                <!-- <p> support@pcfactory.com</p> -->
+                <p id="contact-email" style="font-family: Georgia, 'Times New Roman', Times, serif;"></p>
+                <p style="font-family: Verdana, Geneva, Tahoma, sans-serif;"><strong>Phone:</strong></p>
+                <!-- <p>+91 9876543210</p> -->
+                <p id="contact-phone" style="font-family: Georgia, 'Times New Roman', Times, serif;"></p>
+                <p style="font-family: Verdana, Geneva, Tahoma, sans-serif;"><strong>Address:</strong></p>
+                <!-- <p> Chennai, Tamil Nadu</p> -->
+                <p id="contact-address" style="font-family: Georgia, 'Times New Roman', Times, serif;"></p>
+
+            </div>
+
+            <!-- Contact Form -->
+            <div class="contact-form">
+                <input type="text" id="name" placeholder="Full Name">
+                <input type="email" id="email" placeholder="Email">
+                <input type="text" id="phone" placeholder="Phone Number">
+                <textarea id="message" placeholder="Your Message"></textarea>
+
+                <button onclick="sendMessage()"
+                    style="background: black; font-family: Verdana, Geneva, Tahoma, sans-serif;">Send Message</button>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <!-- COMPANY -->
+            <div>
+                <h3 style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Company</h3>
+                <a href="about.html">
+                    <p style="font-family: Georgia, 'Times New Roman', Times, serif;">About Us</p>
+                </a>
+                <p style="font-family: Georgia, 'Times New Roman', Times, serif;">Terms & Conditions</p>
+                <p style="font-family: Georgia, 'Times New Roman', Times, serif;">How to set up a PC</p>
+            </div>
+
+            <!-- CONTACT -->
+            <div>
+                <h3 style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Contact Us</h3>
+                <p style="font-family: Georgia, 'Times New Roman', Times, serif;"><i class="fa fa-phone"></i> +91
+                    8765123466</p>
+                <p style="font-family: Georgia, 'Times New Roman', Times, serif;"><i class="fa fa-envelope"></i>
+                    support@pcfactory.com</p>
+                <p style="font-family: Georgia, 'Times New Roman', Times, serif;"><i class="fa fa-link"></i> Get Support
+                </p>
+            </div>
+
+            <!-- TIMING -->
+            <div>
+                <h3 style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Opening</h3>
+                <p style="font-family: Georgia, 'Times New Roman', Times, serif;">Mon - Sat : 9:00AM - 7:30PM</p>
+                <p style="font-family: Georgia, 'Times New Roman', Times, serif;">Sunday : 9:00AM - 6:00PM</p>
+            </div>
+
+        </div><br><br>
+
+        <p class="copy" style="margin-right: 50px; font-family: Georgia, 'Times New Roman', Times, serif;">© PC Factory,
+            All
+            Rights Reserved</p>
+
+    </footer>
+    <script>
+        function sendMessage() {
+
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let phone = document.getElementById("phone").value;
+            let message = document.getElementById("message").value;
+
+            if (name === "" || email === "") {
+                alert("Please fill required fields!");
+                return;
+            }
+
+            let data = {
+                name: name,
+                email: email,
+                phone: phone,
+                message: message
+            };
+
+            fetch("http://localhost:5050/api/contact", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(data)
+            })
+                .then(response => response.json())
+                .then(result => {
+                    alert("Message Sent Successfully!");
+                })
+                .catch(error => {
+                    console.log(error);
+                    alert("Error sending message");
+                });
+
+        }
+    </script>
+
+
+    <script>
+
+        fetch("http://localhost:5050/api/content/contact")
+            .then(res => res.json())
+            .then(data => {
+
+                let latest = {};
+
+                data.forEach(item => {
+                    latest[item.section] = item.content;
+                });
+
+                document.getElementById("contact-email").innerText = latest["contact-email"] || "";
+                document.getElementById("contact-phone").innerText = latest["contact-phone"] || "";
+                document.getElementById("contact-address").innerText = latest["contact-address"] || "";
+
+            });
+
+    </script>
+
+</body>
+
+</html>
